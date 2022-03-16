@@ -1,7 +1,7 @@
 var startQuiz = document.querySelector('.startButton');
 var correct = document.getElementById("#correct");
 var wrong = document.getElementById("#wrong")
-var timerElement = document.querySelector('.timer');
+var timerElement = document.querySelector('#timer');
 var chosenQuestion = [];
 var correctCount = 0;
 var wrongCount = 0;
@@ -26,3 +26,32 @@ var questionBlock = [
     answer: "Brendan Eich" },
 ];
 
+function init() {
+  getCorrect();
+  getWrong();
+}
+
+function startQuiz() {
+  isCorrect = false;
+  timerCount = 50;
+  startButtton.diabled = true;
+  presentQuestion()
+  startTimer()
+}
+
+function startTimer() {
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+    if (timerCount >=0) {
+      if (isCorrect = false) {
+        timerCount-10;
+      }
+    }
+
+    if (timerCount === 0) {
+      clearInterval(timer);
+      gameOver();
+    }
+  }, 50);
+}
