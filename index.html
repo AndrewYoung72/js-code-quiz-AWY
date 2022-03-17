@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <title>Javascript Code Quiz</title>
 </head>
 <body>
-  <h1>Javascript Coding Quiz</h1>
+ 
   <main>
-    <section>
-      <div class="start-quiz">
+
+    <section id="container">
+      <div id="start-quiz">
       <p>Try to answer the Javascript code questions within the time limit. Incorrect answers reduce the time by 10 seconds.</p>
-      <button class="start-button" type="button">Start Quiz</button>
+      <button id="start-button" type="button">Start Quiz</button>
       </div>
     </section>
 <!--quiz box-->
 
     <section id="box-timer">
-      <div id="timer-text">
-      <div id="timer">50</div>
-      <h3>Seconds: </h3>
+      <h3>Seconds</h3>
+      <div id="timer-count">50</div> 
     </section>
   </main>
   <script src="script.js"></script>

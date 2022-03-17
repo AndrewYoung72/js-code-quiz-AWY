@@ -1,13 +1,23 @@
-var startQuiz = document.querySelector('.startButton');
+var questionBox = document.querySelector(".question-box");
+var startQuiz = document.querySelector(".start-button");
 var correct = document.getElementById("#correct");
-var wrong = document.getElementById("#wrong")
-var timerElement = document.querySelector('#timer');
-var chosenQuestion = [];
-var correctCount = 0;
-var wrongCount = 0;
-var isCorrect = false;
-var timer;
-var timerCount;
+var timerElement = document.querySelector("#timer")
+var wrong = document.getElementById("#wrong");
+var timeLeft = 50;
+
+function startTimer() {
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+      clearInterval(timer);
+  }, 1000);
+}
+// var chosenQuestion = [];
+// var correctCount = 0;
+// var wrongCount = 0;
+// var isCorrect = false;
+// var timer;
+// var timerCount;
 
 // Question Array
 var questionBlock = [
@@ -26,32 +36,43 @@ var questionBlock = [
     answer: "Brendan Eich" },
 ];
 
-function init() {
-  getCorrect();
-  getWrong();
+function timerSetup() ;
 }
 
-function startQuiz() {
-  isCorrect = false;
-  timerCount = 50;
-  startButtton.diabled = true;
-  presentQuestion()
-  startTimer()
-}
+// function init() {
+//   getCorrect();
+//   getWrong();
+// }
 
-function startTimer() {
-  timer = setInterval(function() {
-    timerCount--;
-    timerElement.textContent = timerCount;
-    if (timerCount >=0) {
-      if (isCorrect = false) {
-        timerCount-10;
-      }
-    }
+// function startQuiz() {
+//   isCorrect = false;
+//   timerCount = 50;
+//   startButtton.diabled = true;
+//   presentQuestion()
+//   startTimer()
+// }
 
-    if (timerCount === 0) {
-      clearInterval(timer);
-      gameOver();
-    }
-  }, 50);
-}
+// function correct() {
+
+// }
+
+// function startTimer() {
+//   timer = setInterval(function() {
+//     timerCount--;
+//     timerElement.textContent = timerCount;
+//     if (timerCount >=0) {
+//       if (isCorrect ) {
+//         timerCount -10;
+//       }
+//     }
+
+//     if (timerCount === 0) {
+//       clearInterval(timer);
+//       gameOver();
+//     }
+//   }, 1000);
+// }
+
+ startButtton.addEventListener("click", startQuiz);
+
+// init();

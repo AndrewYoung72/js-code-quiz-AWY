@@ -1,0 +1,44 @@
+body {
+display: flex;
+align-items: center;
+height: 100vh;
+background: antiquewhite;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: lightsteelblue;
+  font-size: 25px;
+  border: solid  grey;
+}
+#container {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+}
+
+#start-button {
+  height: 70px;
+  width: 300px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: aqua;
+  color: grey;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 20px;
+  border: 2px solid grey;
+}
+
+#start-button:hover {
+  background-color: magenta;
+}
+
+#box-timer {
+  height: fit-content;
+  width: fit-content;
+  background-color: grey;
+}
