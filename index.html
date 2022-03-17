@@ -18,14 +18,15 @@
       <button id="start-button" type="button">Start Quiz</button>
       </div>
     </header>
-<!--quiz box-->
+<!--Quiz box-->
   <main>
+    <div class="container">
     <section>
+      <h3>JavaScript Code Quiz</h3>
       <div class="quiz-box">
         <div id="questions">Questions go here</div>
         <div>
       </div>
-      <button class="reset-score">Reset Score</button>
     </section>
 <!--Results Section-->
     <section>
@@ -35,14 +36,15 @@
         <h2>Wrong: <span id="wrong">0</span></h2>
         <div>
       </div>
+<!--Timer Section-->
+      <div class="timer-box">
+        <h4>Seconds</h4>
+        <div id="time-text"></div>
+        <div id="timer-count">00:00</div>
+      </div>
       <button class="reset-score">Reset Score</button>
     </section>
-<!--Timer Section-->
-    <section class="box-timer">
-      <div id="time-text"></div>
-      <div id="timer-count">50</div>
-      <h3>Seconds</h3>
-    </section>
+
   </main>
   <script src="script.js"></script>
 </body>
