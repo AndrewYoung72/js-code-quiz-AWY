@@ -10,19 +10,38 @@
 </head>
 <body>
  
-  <main>
-
-    <section id="container">
+  
+<!--Start Quiz-->
+    <header class="header">
       <div id="start-quiz">
       <p>Try to answer the Javascript code questions within the time limit. Incorrect answers reduce the time by 10 seconds.</p>
       <button id="start-button" type="button">Start Quiz</button>
       </div>
-    </section>
+    </header>
 <!--quiz box-->
-
-    <section id="box-timer">
+  <main>
+    <section>
+      <div class="quiz-box">
+        <div id="questions">Questions go here</div>
+        <div>
+      </div>
+      <button class="reset-score">Reset Score</button>
+    </section>
+<!--Results Section-->
+    <section>
+      <div class="results">
+        <div class="correct-wrong">
+        <h2>Correct: <span id="correct">0 </span></h2>
+        <h2>Wrong: <span id="wrong">0</span></h2>
+        <div>
+      </div>
+      <button class="reset-score">Reset Score</button>
+    </section>
+<!--Timer Section-->
+    <section class="box-timer">
+      <div id="time-text"></div>
+      <div id="timer-count">50</div>
       <h3>Seconds</h3>
-      <div id="timer-count">50</div> 
     </section>
   </main>
   <script src="script.js"></script>
