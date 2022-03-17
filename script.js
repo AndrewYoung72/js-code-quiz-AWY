@@ -1,24 +1,14 @@
-var questionBox = document.querySelector(".question-box");
-var startQuiz = document.querySelector(".start-button");
+var questionBox = document.querySelector("#questions");
+var startQuiz = document.querySelector("#start-button");
 var correct = document.getElementById("#correct");
-var timerElement = document.querySelector("#timer")
 var wrong = document.getElementById("#wrong");
-var timeLeft = 50;
-
-function startTimer() {
-  timer = setInterval(function() {
-    timerCount--;
-    timerElement.textContent = timerCount;
-      clearInterval(timer);
-  }, 1000);
-}
-// var chosenQuestion = [];
-// var correctCount = 0;
-// var wrongCount = 0;
-// var isCorrect = false;
-// var timer;
-// var timerCount;
-
+var timerElement = document.querySelector("#timer-count")
+var correct = 0;
+var wrong = 0;
+var isCorrect = false;
+var timer;
+var timerCount;
+var chosenQuestion = [];
 // Question Array
 var questionBlock = [
   {
@@ -36,42 +26,29 @@ var questionBlock = [
     answer: "Brendan Eich" },
 ];
 
-function timerSetup() ;
+
+function init() {
+  getCorrect();
+  getWrong();
 }
 
-// function init() {
-//   getCorrect();
-//   getWrong();
-// }
+function startQuiz() {
+  isCorrect = false;
+  timerCount = 50;
+  startButtton.disabled = true;
+  presentQuestion()
+  startTimer()
+}
 
-// function startQuiz() {
-//   isCorrect = false;
-//   timerCount = 50;
-//   startButtton.diabled = true;
-//   presentQuestion()
-//   startTimer()
-// }
 
-// function correct() {
+function timerSetup() {
+  timer = setInterval(function() {
+    timerCount--;
+    timerElement.textContent = timerCount;
+      clearInterval(timer);
+  }, 1000);
+}
 
-// }
-
-// function startTimer() {
-//   timer = setInterval(function() {
-//     timerCount--;
-//     timerElement.textContent = timerCount;
-//     if (timerCount >=0) {
-//       if (isCorrect ) {
-//         timerCount -10;
-//       }
-//     }
-
-//     if (timerCount === 0) {
-//       clearInterval(timer);
-//       gameOver();
-//     }
-//   }, 1000);
-// }
 
  startButtton.addEventListener("click", startQuiz);
 
