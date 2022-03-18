@@ -52,8 +52,8 @@ function startTimer() {
 
 // Function to link chosen question to html
 function presentQuestion() {
-
-}
+//   for ()
+ }
 
 // I need to determine if the answer is correct or wrong
 function answerCorrect() {
@@ -101,4 +101,4 @@ function getWrong() {
 
  startButtton.addEventListener("click", startQuiz);
 
-init();
+init()
