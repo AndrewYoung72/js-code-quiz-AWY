@@ -15,12 +15,14 @@
     <header class="header">
       <div id="start-quiz">
       <p>Try to answer the Javascript code questions within the time limit. Incorrect answers reduce the time by 10 seconds.</p>
-      <button id="start-button" type="button">Start Quiz</button>
+      <div id="start-button">
+      <button type="button">Start Quiz</button>
+      </div>
       </div>
     </header>
 <!--Quiz box-->
-  <main>
-    <div class="container">
+  <main class="container">
+    <div >
     <section>
       <h3>JavaScript Code Quiz</h3>
       <div class="quiz-box">
@@ -33,7 +35,6 @@
       </div>
     </section>
 <!--Results Section-->
-    <section>
       <div class="results">
         <div class="correct-wrong">
         <h2>Correct: <span id="correct">0 </span></h2>
@@ -47,7 +48,6 @@
         <div id="timer-count">00:00</div>
       </div>
       <button class="reset-score">Reset Score</button>
-    </section>
 
   </main>
   <!-- <script src="script.js"></script> -->
