@@ -86,6 +86,8 @@ background: white;
 }
 
 .container .results {
+  display: inline-block;
+  flex-direction: row;
   height: 70px;
   width: 400px;
   text-align: center;
