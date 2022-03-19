@@ -40,9 +40,7 @@ background: white;
   background-color: blue;
   color: aliceblue;
 }
-#start-butoon button:hover {
-  background-color: green;
-}
+
 
 #start-button:hover {
   background-color: green;
@@ -95,10 +93,11 @@ background: white;
 
 .container .correct-wrong {
   display: inline-block;
+  align-items: stretch;
   flex-direction: row;
   height: auto;
   width: 400px;
-  text-align: center;
+  text-align: start;
   padding: 20px 0;
   margin: auto;
   background-image: linear-gradient(to right, silver , lightblue);
@@ -107,6 +106,10 @@ background: white;
   font-weight: 500;
   border-radius: 10px;
   border: 2px solid grey; 
+}
+
+.container .correct-wrong #wrong {
+  text-align: end;
 }
 
 .container .timer-box {
@@ -122,6 +125,8 @@ background: white;
   border-radius: 10px;
   border: 2px solid grey; 
 }
+
+
 
 @media screen and (max-width: 992px) {
   header {

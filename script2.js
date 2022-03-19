@@ -29,7 +29,7 @@ var questionBlock = [
   },
 ];
 
-// questionBlock[0].choices[0]
+// questionBlock[0].choices[0].answer[0]
 
 // Called by start quiz button, starts the quiz, timer, question
 function startQuiz() {
@@ -70,6 +70,13 @@ function presentQuestion() {
   choice3Btn.addEventListener("click", nextQuestion)
   choice4Btn.addEventListener("click", nextQuestion)
 }
+function timerDock() {
+  if(click !== [currentIndex.answer]) {
+    timerCount -=10;
+  }
+}
+
+
 
 function nextQuestion() {
   if(currentIndex < questionBlock.length - 1) {
@@ -83,7 +90,7 @@ function nextQuestion() {
 
 function endQuiz() {
   clearInterval(timer);
-  alert("You have finished the quiz")
+  prompt("You have finished the quiz. Would you like to save your initials and score?")
 }
 
 startButton.addEventListener("click", startQuiz);
