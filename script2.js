@@ -5,7 +5,7 @@ var startContainer = document.querySelector(".header")
 var correct = document.getElementById("correct");
 var wrong = document.getElementById("wrong");
 var timerElement = document.querySelector("#timer-count")
-
+var userScore = 0;
 var timer;
 var timerCount;
 var currentIndex = 0;
@@ -65,25 +65,49 @@ function presentQuestion() {
   choice3Btn.textContent = questionBlock[currentIndex].choices[2];
   choice4Btn.textContent = questionBlock[currentIndex].choices[3];
 
-  choice1Btn.addEventListener("click", nextQuestion)
-  choice2Btn.addEventListener("click", nextQuestion)
-  choice3Btn.addEventListener("click", nextQuestion)
-  choice4Btn.addEventListener("click", nextQuestion)
-}
-function timerDock() {
-  if(click !== [currentIndex.answer]) {
+
+  choice1Btn.addEventListener("click", function() { 
+    if (choice1Btn.textContent === questionBlock[currentIndex].answer) {
+    userScore++ 
+  } else {
     timerCount -=10;
-  }
+  } nextQuestion()
+  })
+
+  choice2Btn.addEventListener("click", function() { 
+    if (choice2Btn.textContent === questionBlock[currentIndex].answer) {
+    userScore++ 
+  } else {
+    timerCount -=10;
+  } nextQuestion()
+  })
+
+  choice3Btn.addEventListener("click", function() { 
+    if (choice3Btn.textContent === questionBlock[currentIndex].answer) {
+    userScore++ 
+  } else {
+    timerCount -=10;
+  }nextQuestion()
+  })   
+  
+  choice4Btn.addEventListener("click", function(){ 
+    if (choice4Btn.textContent === questionBlock[currentIndex].answer) {
+    userScore++ 
+  } else {
+    timerCount -=10;
+  }nextQuestion()
+  }) 
 }
 
 
 
 function nextQuestion() {
-  if(currentIndex < questionBlock.length - 1) {
+  console.log(currentIndex)
+  if(currentIndex < questionBlock.length) {
     currentIndex++;
     presentQuestion()
   } else {
-    // the quiz has reached its end
+    // the quiz has reached it end
     endQuiz()
   }
 }
@@ -93,4 +117,5 @@ function endQuiz() {
   prompt("You have finished the quiz. Would you like to save your initials and score?")
 }
 
-startButton.addEventListener("click", startQuiz);
+
+startButton.addEventListener("click", startQuiz)

@@ -93,7 +93,6 @@ background: white;
 
 .container .correct-wrong {
   display: inline-block;
-  align-items: stretch;
   flex-direction: row;
   height: auto;
   width: 400px;
@@ -108,9 +107,6 @@ background: white;
   border: 2px solid grey; 
 }
 
-.container .correct-wrong #wrong {
-  text-align: end;
-}
 
 .container .timer-box {
   height: 70px;
